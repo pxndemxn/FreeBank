@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import BackButton from '../BackButton';
 import InputField from '../InputField';
 import PrimaryButton from '../PrimaryButton';
-import { colors } from '../../theme/colors';
+import { colors } from '../theme/colors';
 
 export default function SignInScreen({ navigation }) {
   const [email, setEmail] = useState('');

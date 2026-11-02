@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-import { colors } from '../theme/colors';
+import { colors } from './theme/colors';
 
 // Логотип белгісі екі қиылысқан сақинадан салынған.
 // Нақты логотип болса: <Image source={require('../../assets/logo.png')} />

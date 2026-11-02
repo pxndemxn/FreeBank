@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import BackButton from '../BackButton';
 import InputField from '../InputField';
 import PrimaryButton from '../PrimaryButton';
-import { colors } from '../../theme/colors';
+import { colors } from '../theme/colors';
 
 export default function SignUpScreen({ navigation }) {
   const [form, setForm] = useState({ fullName: '', phone: '', email: '', password: '' });

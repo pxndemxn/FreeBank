@@ -10,7 +10,7 @@ import OnboardingScreen2 from './components/screens/OnboardingScreen2';
 import OnboardingScreen3 from './components/screens/OnboardingScreen3';
 import SignInScreen from './components/screens/SignInScreen';
 import SignUpScreen from './components/screens/SignUpScreen';
-import { colors } from './theme/colors';
+import { colors } from './components/theme/colors';
 
 export type RootStackParamList = {
   Splash: undefined;

@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { View, StyleSheet } from 'react-native';
 import Logo from '../../components/Logo';
-import { colors } from '../../theme/colors';
+import { colors } from '../theme/colors';
 
 export default function SplashScreen({ navigation }) {
   useEffect(() => {

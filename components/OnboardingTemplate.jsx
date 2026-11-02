@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { Ionicons } from '@expo/vector-icons';
 import PageIndicator from './PageIndicator';
 import PrimaryButton from './PrimaryButton';
-import { colors } from '../theme/colors';
+import { colors } from './theme/colors';
 
 /**
  * Үш onboarding беті үшін ортақ шаблон.
