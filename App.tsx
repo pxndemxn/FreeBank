@@ -4,12 +4,12 @@ import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-import SplashScreen from './screens/SplashScreen';
-import OnboardingScreen1 from './screens/OnboardingScreen1';
-import OnboardingScreen2 from './screens/OnboardingScreen2';
-import OnboardingScreen3 from './screens/OnboardingScreen3';
-import SignInScreen from './screens/SignInScreen';
-import SignUpScreen from './screens/SignUpScreen';
+import SplashScreen from './components/screens/SplashScreen';
+import OnboardingScreen1 from './components/screens/OnboardingScreen1';
+import OnboardingScreen2 from './components/screens/OnboardingScreen2';
+import OnboardingScreen3 from './components/screens/OnboardingScreen3';
+import SignInScreen from './components/screens/SignInScreen';
+import SignUpScreen from './components/screens/SignUpScreen';
 import { colors } from './theme/colors';
 
 export type RootStackParamList = {

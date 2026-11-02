@@ -1,5 +1,5 @@
 import React from 'react';
-import OnboardingTemplate from '../components/OnboardingTemplate';
+import OnboardingTemplate from '../OnboardingTemplate';
 
 // Иллюстрацияны Figma-дан экспорттап, assets папкасына салыңыз да, жолды ашыңыз:
 // const illustration = require('../../assets/onboarding1.png');

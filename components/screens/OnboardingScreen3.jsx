@@ -1,5 +1,5 @@
 import React from 'react';
-import OnboardingTemplate from '../components/OnboardingTemplate';
+import OnboardingTemplate from '../OnboardingTemplate';
 
 // const illustration = require('../../assets/onboarding3.png');
 const illustration = null;

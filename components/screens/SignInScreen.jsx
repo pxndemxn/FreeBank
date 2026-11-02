@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, Text, Pressable, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import BackButton from '../components/BackButton';
-import InputField from '../components/InputField';
-import PrimaryButton from '../components/PrimaryButton';
-import { colors } from '../theme/colors';
+import BackButton from '../BackButton';
+import InputField from '../InputField';
+import PrimaryButton from '../PrimaryButton';
+import { colors } from '../../theme/colors';
 
 export default function SignInScreen({ navigation }) {
   const [email, setEmail] = useState('');
