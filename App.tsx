@@ -10,6 +10,7 @@ import OnboardingScreen2 from './components/screens/OnboardingScreen2';
 import OnboardingScreen3 from './components/screens/OnboardingScreen3';
 import SignInScreen from './components/screens/SignInScreen';
 import SignUpScreen from './components/screens/SignUpScreen';
+import MainApp from './components/screens/MainApp';
 import { colors } from './components/theme/colors';
 
 export type RootStackParamList = {
@@ -19,6 +20,7 @@ export type RootStackParamList = {
   Onboarding3: undefined;
   SignIn: undefined;
   SignUp: undefined;
+  Main: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -43,6 +45,11 @@ export default function App() {
           <Stack.Screen name="Onboarding3" component={OnboardingScreen3} />
           <Stack.Screen name="SignIn" component={SignInScreen} />
           <Stack.Screen name="SignUp" component={SignUpScreen} />
+          <Stack.Screen
+            name="Main"
+            component={MainApp}
+            options={{ gestureEnabled: false }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>
