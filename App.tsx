@@ -18,6 +18,12 @@ import {
   AllCardsRoute,
   TransactionHistoryRoute,
   SearchRoute,
+  ChangePasswordRoute,
+  SendMoneyRoute,
+  RequestMoneyRoute,
+  LanguageRoute,
+  TermsRoute,
+  CategoryHistoryRoute,
 } from './components/screens/NavScreens';
 import { colors } from './components/theme/colors';
 
@@ -35,6 +41,12 @@ export type RootStackParamList = {
   AllCards: undefined;
   TransactionHistory: undefined;
   Search: undefined;
+  ChangePassword: undefined;
+  SendMoney: undefined;
+  RequestMoney: undefined;
+  Language: undefined;
+  Terms: undefined;
+  CategoryHistory: undefined;
 };
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -71,6 +83,16 @@ export default function App() {
           <Stack.Screen name="AllCards" component={AllCardsRoute} />
           <Stack.Screen name="TransactionHistory" component={TransactionHistoryRoute} />
           <Stack.Screen name="Search" component={SearchRoute} />
+          <Stack.Screen name="ChangePassword" component={ChangePasswordRoute} />
+          <Stack.Screen name="SendMoney" component={SendMoneyRoute} />
+          <Stack.Screen name="RequestMoney" component={RequestMoneyRoute} />
+          <Stack.Screen name="Language" component={LanguageRoute} />
+          <Stack.Screen name="Terms" component={TermsRoute} />
+          <Stack.Screen
+            name="CategoryHistory"
+            component={CategoryHistoryRoute}
+            options={{ presentation: 'transparentModal', animation: 'slide_from_bottom' }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </SafeAreaProvider>

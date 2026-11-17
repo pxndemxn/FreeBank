@@ -25,7 +25,7 @@ const buildPath = (pts) => {
   return d;
 };
 
-export default function StatisticsScreen({ navigate }) {
+export default function StatisticsScreen({ navigate, go }) {
   const [month, setMonth] = useState('Jan');
   const marker = POINTS[5];
 
@@ -36,7 +36,7 @@ export default function StatisticsScreen({ navigate }) {
           <Ionicons name="chevron-back" size={18} color={C.text} />
         </TouchableOpacity>
         <Text style={s.title}>Statistics</Text>
-        <TouchableOpacity style={s.roundBtn}>
+        <TouchableOpacity style={s.roundBtn} onPress={() => go('CategoryHistory')}>
           <Ionicons name="notifications-outline" size={18} color={C.text} />
         </TouchableOpacity>
       </View>

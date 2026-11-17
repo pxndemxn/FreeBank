@@ -15,7 +15,7 @@ function Row({ label, value, onPress }) {
   );
 }
 
-export default function SettingsScreen({ navigate }) {
+export default function SettingsScreen({ navigate, go }) {
   const [biometric, setBiometric] = useState(false);
 
   return (
@@ -25,19 +25,19 @@ export default function SettingsScreen({ navigate }) {
           <Ionicons name="chevron-back" size={18} color={C.text} />
         </TouchableOpacity>
         <Text style={s.title}>Settings</Text>
-        <TouchableOpacity style={s.roundBtn}>
+        <TouchableOpacity style={s.roundBtn} onPress={() => go('DesignMenu')}>
           <Ionicons name="grid-outline" size={16} color={C.text} />
         </TouchableOpacity>
       </View>
 
       <Text style={s.group}>General</Text>
-      <Row label="Language" value="English" />
+      <Row label="Language" value="English" onPress={() => go('Language')} />
       <Row label="My Profile" onPress={() => navigate('profile')} />
       <Row label="Contact Us" />
 
       <Text style={[s.group, { marginTop: 24 }]}>Security</Text>
-      <Row label="Change Password" />
-      <Row label="Privacy Policy" />
+      <Row label="Change Password" onPress={() => go('ChangePassword')} />
+      <Row label="Privacy Policy" onPress={() => go('Terms')} />
       <Text style={s.hint}>Choose what data you share with us</Text>
 
       <View style={s.row}>

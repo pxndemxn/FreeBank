@@ -13,6 +13,7 @@ export default function SignInScreen({ navigation }) {
   const handleSignIn = () => {
     // TODO: авторизация логикасы (API сұрауы)
     console.log('Sign In:', { email, password });
+    navigation.replace('Main');
   };
 
   return (

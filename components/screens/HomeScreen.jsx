@@ -6,13 +6,13 @@ import CreditCard from '../CreditCard';
 import TransactionItem from '../TransactionItem';
 
 const ACTIONS = [
-  { icon: 'arrow-up', label: 'Sent' },
-  { icon: 'arrow-down', label: 'Receive' },
+  { icon: 'arrow-up', label: 'Sent', route: 'SendMoney' },
+  { icon: 'arrow-down', label: 'Receive', route: 'RequestMoney' },
   { icon: 'cash-outline', label: 'Loan' },
   { icon: 'cloud-upload-outline', label: 'Topup' },
 ];
 
-export default function HomeScreen({ navigate }) {
+export default function HomeScreen({ navigate, go }) {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 20, paddingTop: 56 }}>
       <View style={s.header}>
@@ -25,7 +25,7 @@ export default function HomeScreen({ navigate }) {
             <Text style={s.name}>Tanya Myroniuk</Text>
           </View>
         </TouchableOpacity>
-        <TouchableOpacity style={s.roundBtn}>
+        <TouchableOpacity style={s.roundBtn} onPress={() => go('Search')}>
           <Ionicons name="search-outline" size={18} color={C.text} />
         </TouchableOpacity>
       </View>
@@ -34,7 +34,7 @@ export default function HomeScreen({ navigate }) {
 
       <View style={s.actions}>
         {ACTIONS.map((a) => (
-          <TouchableOpacity key={a.label} style={{ alignItems: 'center' }}>
+          <TouchableOpacity key={a.label} style={{ alignItems: 'center' }} onPress={() => a.route && go(a.route)}>
             <View style={s.actionCircle}>
               <Ionicons name={a.icon} size={20} color={C.text} />
             </View>
@@ -45,7 +45,9 @@ export default function HomeScreen({ navigate }) {
 
       <View style={s.sectionRow}>
         <Text style={s.section}>Transaction</Text>
-        <Text style={s.seeAll}>See All</Text>
+        <TouchableOpacity onPress={() => go('TransactionHistory')}>
+          <Text style={s.seeAll}>See All</Text>
+        </TouchableOpacity>
       </View>
 
       <TransactionItem icon="logo-apple" title="Apple Store" subtitle="Entertainment" amount="- $5,99" />

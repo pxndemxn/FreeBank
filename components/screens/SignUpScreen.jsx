@@ -14,6 +14,7 @@ export default function SignUpScreen({ navigation }) {
   const handleSignUp = () => {
     // TODO: тіркеу логикасы (API сұрауы)
     console.log('Sign Up:', form);
+    navigation.replace('Main');
   };
 
   return (

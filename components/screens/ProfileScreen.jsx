@@ -4,16 +4,16 @@ import { Ionicons } from '@expo/vector-icons';
 import { C } from '../theme/appColors';
 
 const ITEMS = [
-  { icon: 'person-outline', label: 'Personal Information' },
+  { icon: 'person-outline', label: 'Personal Information', route: 'EditProfile' },
   { icon: 'card-outline', label: 'Payment Preferences' },
-  { icon: 'business-outline', label: 'Banks and Cards' },
+  { icon: 'business-outline', label: 'Banks and Cards', route: 'AllCards' },
   { icon: 'notifications-outline', label: 'Notifications', badge: 2 },
   { icon: 'chatbox-outline', label: 'Message Center' },
   { icon: 'location-outline', label: 'Address' },
   { icon: 'settings-outline', label: 'Settings', goto: 'settings' },
 ];
 
-export default function ProfileScreen({ navigate }) {
+export default function ProfileScreen({ navigate, go }) {
   return (
     <ScrollView style={s.container} contentContainerStyle={{ padding: 20, paddingTop: 56 }}>
       <View style={s.header}>
@@ -37,7 +37,7 @@ export default function ProfileScreen({ navigate }) {
       </View>
 
       {ITEMS.map((it) => (
-        <TouchableOpacity key={it.label} style={s.row} onPress={() => it.goto && navigate(it.goto)}>
+        <TouchableOpacity key={it.label} style={s.row} onPress={() => (it.goto ? navigate(it.goto) : it.route && go(it.route))}>
           <Ionicons name={it.icon} size={18} color={C.muted} style={{ marginRight: 14 }} />
           <Text style={s.label}>{it.label}</Text>
           {it.badge ? (

@@ -8,10 +8,10 @@ import MyCardsScreen from './MyCardsScreen';
 import SettingsScreen from './SettingsScreen';
 import ProfileScreen from './ProfileScreen';
 
-export default function MainApp() {
+export default function MainApp({ navigation }) {
   const [screen, setScreen] = useState('home');
 
-  const props = { navigate: setScreen };
+  const props = { navigate: setScreen, go: (name) => navigation.navigate(name) };
   const showTabs = screen !== 'profile';
 
   return (

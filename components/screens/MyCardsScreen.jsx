@@ -7,7 +7,7 @@ import TransactionItem from '../TransactionItem';
 
 const MAX = 10000;
 
-export default function MyCardsScreen({ navigate }) {
+export default function MyCardsScreen({ navigate, go }) {
   const [value, setValue] = useState(4600);
   const [trackW, setTrackW] = useState(1);
 
@@ -25,7 +25,7 @@ export default function MyCardsScreen({ navigate }) {
           <Ionicons name="chevron-back" size={18} color={C.text} />
         </TouchableOpacity>
         <Text style={s.title}>My Cards</Text>
-        <TouchableOpacity style={s.roundBtn}>
+        <TouchableOpacity style={s.roundBtn} onPress={() => go('AllCards')}>
           <Ionicons name="add" size={20} color={C.text} />
         </TouchableOpacity>
       </View>
